@@ -1,0 +1,22 @@
+PODS:
+  - AmazonIVSPlayer (1.21.0)
+  - SDWebImage (5.18.1):
+    - SDWebImage/Core (= 5.18.1)
+  - SDWebImage/Core (5.18.1)
+
+DEPENDENCIES:
+  - AmazonIVSPlayer (~> 1.21.0)
+  - SDWebImage (~> 5.0)
+
+SPEC REPOS:
+  trunk:
+    - AmazonIVSPlayer
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  AmazonIVSPlayer: 85ebbc42536999322ffe5a50de17e850dc6d0a93
+  SDWebImage: ebdbcebc7933a45226d9313bd0118bc052ad458b
+
+PODFILE CHECKSUM: 33e8db72234cf103c3e3bd52d82871a1ed96e5b4
+
+COCOAPODS: 1.12.0
