@@ -1,6 +1,6 @@
 # Amazon IVS Grid feed for iOS Demo
 
-A demo SwiftUI iPhone application intended as an educational tool to demonstrate how you can build a grid feed of autoplaying videos with [Amazon IVS](https://www.ivs.rocks/).
+A demo UIKit iPhone application intended as an educational tool to demonstrate how you can build a grid feed of autoplaying videos with [Amazon IVS](https://www.ivs.rocks/).
 
 <img src="app-screenshot.png" alt="A screenshot of the demo application running on an iPhone." />
 
