@@ -52,7 +52,7 @@ class PlayerModel {
         player.setAutoMaxQuality(quality)
     }
 
-    private func load(maxAllowedQuality: MaxQuality? = nil) {
+    func load(maxAllowedQuality: MaxQuality? = nil) {
         guard !didLoad else { return }
 
         if let maxAllowed = maxAllowedQuality {

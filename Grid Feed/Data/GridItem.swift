@@ -39,7 +39,7 @@ class GridItem {
     func preload() {
         guard let playerModel = playerModel else { return }
         print("ℹ Preloading item \(id)")
-        playerModel.play()
+        playerModel.load()
     }
 
     func unload() {
