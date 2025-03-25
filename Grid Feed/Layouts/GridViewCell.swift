@@ -10,7 +10,7 @@ import SDWebImage
 import AmazonIVSPlayer
 
 protocol GridCellDelegate {
-    func didTap(_ playerModel: PlayerModel?)
+    func didTap(_ playerView: IVSPlayerView, playerModel: PlayerModel?)
 }
 
 class GridViewCell: UITableViewCell {

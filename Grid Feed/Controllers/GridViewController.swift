@@ -19,6 +19,7 @@ class GridViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     var tappedPlayerModel: PlayerModel?
+    var tappedPlayerView: IVSPlayerView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,7 @@ class GridViewController: UIViewController {
         if let fullscreenVC = segue.destination as? FullscreenViewController {
             tappedPlayerModel?.set(MaxQuality(rawValue: Constants.fullscreenPlayerQuality) ?? .high)
             fullscreenVC.playerModel = tappedPlayerModel
+            fullscreenVC.sourcePlayerView = tappedPlayerView
         }
     }
 }
@@ -81,8 +83,9 @@ extension GridViewController: UITableViewDelegate {
 }
 
 extension GridViewController: GridCellDelegate {
-    func didTap(_ playerModel: PlayerModel?) {
+    func didTap(_ playerView: IVSPlayerView, playerModel: PlayerModel?) {
         tappedPlayerModel = playerModel
+        tappedPlayerView = playerView
         performSegue(withIdentifier: "toFullscreen", sender: self)
     }
 }

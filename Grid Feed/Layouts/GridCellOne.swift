@@ -48,6 +48,6 @@ class GridCellOne: GridViewCell {
 
     @objc
     func onPlayerViewTap() {
-        delegate?.didTap(playerModel)
+        delegate?.didTap(playerView, playerModel: playerModel)
     }
 }
