@@ -10,7 +10,7 @@ import SDWebImage
 import AmazonIVSPlayer
 
 protocol GridCellDelegate {
-    func didTap(_ playerModel: PlayerModel?)
+    func didTap(_ playerView: IVSPlayerView, playerModel: PlayerModel?)
 }
 
 class GridViewCell: UITableViewCell {
@@ -44,7 +44,15 @@ class GridViewCell: UITableViewCell {
         view.layer.masksToBounds = false
     }
 
+    func setupVideo(item: GridItem, playerView: IVSPlayerView, thumbnailImageView: UIImageView) {
+        item.set(delegate: self, and: playerView)
+        playerView.videoGravity = .resizeAspectFill
+        playerView.player = item.playerModel?.player
+        thumbnailImageView.sd_setImage(with: URL(string: item.thumbnail ?? ""))
+    }
+
     override func prepareForReuse() {
+        print("ℹ Preparing grid view cell for reuse")
         playerModel?.pause()
         playerModel = nil
     }
@@ -64,6 +72,7 @@ extension GridViewCell: IVSPlayer.Delegate {
         stateDidChange(state)
         if state == .ready {
             playerModel?.availableQualitiesChanged(player.qualities)
+            playerModel?.play()
         }
     }
 }

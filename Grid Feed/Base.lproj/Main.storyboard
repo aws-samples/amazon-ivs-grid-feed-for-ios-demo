@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LiD-LT-mZh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LiD-LT-mZh">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -71,7 +71,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="04K-Qn-HQV">
                                                             <rect key="frame" x="263.33333333333331" y="0.0" width="129.66666666666669" height="262"/>
                                                             <subviews>
-                                                                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ncx-Fi-UMV" userLabel="PlayerView" customClass="IVSPlayerView">
+                                                                <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ncx-Fi-UMV" userLabel="PlayerView" customClass="IVSPlayerView">
                                                                     <rect key="frame" x="0.0" y="0.0" width="129.66666666666666" height="262"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </view>
@@ -79,7 +79,7 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="129.66666666666666" height="262"/>
                                                                 </imageView>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZaV-h1-dB3">
-                                                                    <rect key="frame" x="101.66666666666669" y="9.9999999999999982" width="20" height="16"/>
+                                                                    <rect key="frame" x="101.66666666666669" y="10.33333333333333" width="20" height="15.66666666666667"/>
                                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="20" id="Gn7-CB-7ue"/>
@@ -145,7 +145,7 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="129.66666666666666" height="248"/>
                                                                 </imageView>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MGg-zu-juc">
-                                                                    <rect key="frame" x="101.66666666666667" y="9.9999999999999982" width="20" height="16"/>
+                                                                    <rect key="frame" x="101.66666666666667" y="10.33333333333333" width="20" height="15.66666666666667"/>
                                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="20" id="A88-dH-oqh"/>
@@ -244,7 +244,7 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="261.66666666666669" height="248"/>
                                                                 </imageView>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RIa-Q4-dpv">
-                                                                    <rect key="frame" x="233.66666666666666" y="9.9999999999999982" width="20" height="16"/>
+                                                                    <rect key="frame" x="233.66666666666666" y="10.33333333333333" width="20" height="15.66666666666667"/>
                                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="20" id="Zya-Mu-wKS"/>
@@ -436,7 +436,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="play.fill" catalog="system" width="117" height="128"/>
+        <image name="play.fill" catalog="system" width="120" height="128"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

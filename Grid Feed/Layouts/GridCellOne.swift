@@ -24,6 +24,7 @@ class GridCellOne: GridViewCell {
     }
 
     override func stateDidChange(_ state: IVSPlayer.State) {
+        super.stateDidChange(state)
         UIView.animate(withDuration: 0.1, delay: 0.3, animations: {
             self.thumbnailImageView.layer.opacity = state == .playing ? 0 : 1
         })
@@ -40,16 +41,13 @@ class GridCellOne: GridViewCell {
                     let imageView = createImageView(item)
                     currentStack?.addArrangedSubview(imageView)
                 case .video:
-                    item.set(delegate: self, and: playerView)
-                    playerView.videoGravity = .resizeAspectFill
-                    playerView.player = item.playerModel?.player
-                    thumbnailImageView.sd_setImage(with: URL(string: item.thumbnail ?? ""))
+                    setupVideo(item: item, playerView: playerView, thumbnailImageView: thumbnailImageView)
             }
         }
     }
 
     @objc
     func onPlayerViewTap() {
-        delegate?.didTap(playerModel)
+        delegate?.didTap(playerView, playerModel: playerModel)
     }
 }

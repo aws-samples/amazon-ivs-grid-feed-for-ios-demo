@@ -10,6 +10,7 @@ import AmazonIVSPlayer
 
 class FullscreenViewController: UIViewController {
     var playerModel: PlayerModel?
+    var sourcePlayerView: IVSPlayerView?
 
     @IBOutlet weak var playerView: IVSPlayerView!
     @IBOutlet weak var backButton: UIButton!
@@ -27,8 +28,15 @@ class FullscreenViewController: UIViewController {
         backButton.layer.masksToBounds = false
     }
 
-    @IBAction func didTapBack(_ sender: Any) {
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         playerModel?.set(MaxQuality(rawValue: Constants.smallPlayerQuality) ?? .low)
+        if let sourcePlayerView {
+            sourcePlayerView.player = playerModel?.player
+        }
+    }
+
+    @IBAction func didTapBack(_ sender: Any) {
         dismiss(animated: true)
     }
 }
